@@ -1,9 +1,16 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
-int main(){
+struct BankAccount {
+    string accountNumber;
+    string accountHolderName;
+    double balance;
+};
 
-
-
-    return 0;
+void createAccount(BankAccount &account, const string &accNum, const string &accHolder, double initBalance) {
+    account.accountNumber = accNum;
+    account.accountHolderName = accHolder;
+    account.balance = initBalance;
+    std::cout << "Account created successfully!\n";
 }
